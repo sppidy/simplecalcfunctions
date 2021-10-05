@@ -1,5 +1,8 @@
-print("You Have Imported Simple Calculation Module")
-
+def helpme(n):
+    if n=="help":
+        print("The following commands are available : add\nsub\nmul\ndiv\nrem\nexp\nfeb\narm\nstarpat\nFor a detailed Help try helpcalc(function_name)")
+    else:
+        print("Please enter a valid command")
 def add(a,b):
     c=a+b
     print(f"The Sum of {a} and {b} is {c}")
@@ -19,8 +22,8 @@ def exp(a,b):
     c=a**b
     print(f"The Exponential Value of {a} power {b} is {c}")
 def feb(n):
-    a,b=0,1
     try:
+        a,b=0,1
         while a < n:
             print(a,end=" ")
             a,b=b,a+b
@@ -41,6 +44,57 @@ def arm(a):
             print(a,"is not an Armstrong Number")
     except TypeError:
         print("Please enter a valid number")
+def starpat(n):
+    try:
+        for i in range(1,n+1):
+            for j in range(1,i+1):
+                print("*",end=" ")
+            print()
+    except TypeError:
+        print("Please enter a valid number")
+def lcm(x,y):
+    try:
+        if x>y:
+            z=x
+        else:
+            z=y
+        while True:
+            if z%x==0 and z%y==0:
+                lcm=z
+                break
+            z+=1
+        print(f"The LCM of {x} and {y} is {lcm}")
+    except TypeError:
+        print("Please enter a valid number")
+def hcf(x,y):
+    try:
+        if x>y:
+            z=x
+        else:
+            z=y
+        while True:
+            if z%x==0 and z%y==0:
+                hcf=z
+                break
+            z-=1
+        print(f"The HCF of {x} and {y} is {hcf}")
+    except TypeError:
+        print("Please enter a valid number")
+def sqrt(n):
+    try:
+        if n<0:
+            print("Please enter a valid number")
+        else:
+            x=n
+            while True:
+                y=(x+n/x)/2
+                if y==x:
+                    break
+                x=y
+            print(f"The Square root of {n} is {x}")
+    except TypeError:
+        print("Please enter a valid number")
+
 def helpcalc(help):
     if help=="add":
         print("This function adds two numbers")
@@ -58,5 +112,7 @@ def helpcalc(help):
         print("This function finds the nth number in the fibonacci series")
     elif help=="arm":
         print("This function checks if a number is an Armstrong number")
+    elif help=="starpat":
+        print("This function prints a pattern of stars")
     else:
         print("Please enter a valid command")
