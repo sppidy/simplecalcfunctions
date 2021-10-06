@@ -11,7 +11,7 @@ author = "Spidy"
 author_email = "sppidytg@gmail.com"
 description = "This Package Contains Simple Calculation Functions."
 license = "GNU AFFERO GENERAL PUBLIC LICENSE (v3)"
-url = "https://github.com/sppidy"
+url = "https://github.com/sppidy/simplecalcfunctions"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.6",
