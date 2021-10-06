@@ -54,30 +54,28 @@ def starpat(n):
         print("Please enter a valid number")
 def lcm(x,y):
     try:
-        if x>y:
-            z=x
+        if x > y:
+            greater = x
         else:
-            z=y
-        while True:
-            if z%x==0 and z%y==0:
-                lcm=z
+            greater = y
+        while(True):
+            if((greater % x == 0) and (greater % y == 0)):
+                lcm = greater
                 break
-            z+=1
-        print(f"The LCM of {x} and {y} is {lcm}")
+            greater += 1
+        return lcm
     except TypeError:
         print("Please enter a valid number")
 def hcf(x,y):
-    try:
-        if x>y:
-            z=x
+    try :
+        if x > y:
+            smaller = y
         else:
-            z=y
-        while True:
-            if z%x==0 and z%y==0:
-                hcf=z
-                break
-            z-=1
-        print(f"The HCF of {x} and {y} is {hcf}")
+            smaller = x
+        for i in range(1, smaller+1):
+            if((x % i == 0) and (y % i == 0)):
+                hcf = i 
+        return hcf
     except TypeError:
         print("Please enter a valid number")
 def sqrt(n):
