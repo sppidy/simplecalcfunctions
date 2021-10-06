@@ -112,5 +112,11 @@ def helpcalc(help):
         print("This function checks if a number is an Armstrong number")
     elif help=="starpat":
         print("This function prints a pattern of stars")
+    elif help=="lcm":
+        print("This function finds the least common multiple of two numbers")
+    elif help=="hcf":
+        print("This function finds the highest common factor of two numbers")
+    elif help=="sqrt":
+        print("This function finds the square root of a number")
     else:
         print("Please enter a valid command")
