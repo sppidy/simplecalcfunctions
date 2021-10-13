@@ -92,7 +92,14 @@ def sqrt(n):
             print(f"The Square root of {n} is {x}")
     except TypeError:
         print("Please enter a valid number")
-
+def sumofseries(n):
+    try:
+        sum=0
+        for i in range(1,n+1):
+            sum=sum+i
+        print(f"The sum of the series is {sum}")
+    except TypeError:
+        print("Please enter a valid number")
 def helpcalc(help):
     if help=="add":
         print("This function adds two numbers")
@@ -118,5 +125,7 @@ def helpcalc(help):
         print("This function finds the highest common factor of two numbers")
     elif help=="sqrt":
         print("This function finds the square root of a number")
+    elif help=="sumofseries":
+        print("This function finds the sum of a series")
     else:
         print("Please enter a valid command")
